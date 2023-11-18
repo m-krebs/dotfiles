@@ -1,3 +1,6 @@
 lib/
 README.md
 install.sh
+
+**/.git
+**/.gitmodules
