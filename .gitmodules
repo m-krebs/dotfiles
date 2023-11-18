@@ -1,4 +1,4 @@
-[submodule "external_nvim"]
-	path = external_nvim
+[submodule "lib/external_nvim"]
+	path = lib/external_nvim
 	url = git@github.com:m-krebs/nvim
-    branch = lazyvim
+	branch = lazyvim
