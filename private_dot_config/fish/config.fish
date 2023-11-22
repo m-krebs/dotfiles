@@ -1,5 +1,3 @@
-nvm &>/dev/null
-
 if status is-interactive
 end
 
@@ -197,6 +195,7 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 
+# thefuck
 if ! command -v thefuck &>/dev/null
     echo "[i] thefuck is not installed. Skipped!"
 else
