@@ -55,6 +55,10 @@ format = '\[[$symbol$branch]($style)\]'
 [gcloud]
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
+[git_commit]
+format = '\[[$hash$tag]($style)\]'
+tag_disabled = false
+
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
 
