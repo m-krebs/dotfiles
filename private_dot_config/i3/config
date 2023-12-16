@@ -10,6 +10,7 @@ floating_modifier $super
 
 #autostart
 #exec --no-startup-id hsetroot -center /usr/share/backgrounds/xfce/light-stripe-maia.jpg
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
@@ -120,7 +121,7 @@ bar {
         active_workspace        #2f343f #2f343f #d8dee8
         inactive_workspace      #2f343f #2f343f #d8dee8
         urgent_workspacei       #2f343f #ebcb8b #2f343f
-    }
+        }
         status_command i3status
 }
 
