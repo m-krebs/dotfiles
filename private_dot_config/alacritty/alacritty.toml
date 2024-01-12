@@ -1,0 +1,13 @@
+[font.normal]
+family = "JetBrainsMono NF"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "Plus"
+mods = "Shift|Alt"
