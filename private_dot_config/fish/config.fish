@@ -207,4 +207,4 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # nvm init
-nvm &>/dev/null
+nvm use node &>/dev/null
