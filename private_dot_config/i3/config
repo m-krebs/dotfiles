@@ -9,7 +9,7 @@ font pango: Noto Sans 12
 floating_modifier $super
 
 #autostart
-#exec --no-startup-id hsetroot -center /usr/share/backgrounds/xfce/light-stripe-maia.jpg
+exec --no-startup-id hsetroot -full /usr/share/backgrounds/custom/mountain-wide.jpg
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
