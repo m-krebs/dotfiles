@@ -15,7 +15,7 @@ exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
 # start a terminal
-bindsym $super+Return exec alacritty
+bindsym $super+Return exec wezterm
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=12'"
