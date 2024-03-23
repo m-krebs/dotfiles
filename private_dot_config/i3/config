@@ -9,8 +9,8 @@ font pango: Noto Sans 12
 floating_modifier $super
 
 #autostart
-exec --no-startup-id hsetroot -full /usr/share/backgrounds/custom/mountain-wide.jpg
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id hsetroot -full /usr/share/backgrounds/custom/code-weird.png
+exec --no-startup-id nitrogen --restore # restore wallpaper
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
@@ -126,7 +126,6 @@ bar {
 for_window [class=".*"] border pixel 2 
 assign [class=URxvt] 1
 assign [class=Firefox|Transmission-gtk] 2
-assign [class=Thunar|File-roller] 2
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Spotify] 4
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
 assign [class=discord] 3
