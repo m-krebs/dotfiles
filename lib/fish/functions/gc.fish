@@ -1,4 +1,3 @@
-function gc --wraps='git commit' --description 'alias gc git commit'
+function gc --wraps='git commit' --description 'alias git commit'
   git commit $argv
-        
 end
