@@ -12,5 +12,7 @@ function npm --description 'Node Package Manager'
             return 1
         end
         command cat package.json | jq -r '.scripts'
+    else
+        command npm $argv
     end
 end
