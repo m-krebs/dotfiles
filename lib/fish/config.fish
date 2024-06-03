@@ -200,6 +200,7 @@ if ! command -v thefuck &>/dev/null
     echo "[i] thefuck is not installed. Skipped!"
 else
     thefuck --alias | source
+    set -x THEFUCK_OVERRIDDEN_ALIASES 'git'
 end
 
 # bun
