@@ -209,3 +209,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # nvm init
 nvm use node &>/dev/null
+
+# unset the globally inherited EDITOR
+set -eg EDITOR
