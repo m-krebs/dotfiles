@@ -46,9 +46,6 @@ complete -c pnpm -n "__fish_seen_subcommand_from publish" -l publish-branch -d '
 complete -c pnpm -n "__fish_seen_subcommand_from publish" -l recursive -s r -d 'Publish all packages from the workspace'
 complete -c pnpm -n "__fish_seen_subcommand_from publish" -l tag -x -d 'Registers the published package with the given tag'
 
-complete -c pnpm -n "__fish_seen_subcommand_from completion" -l bash -x -d 'Tells the registry whether this package should be published as public or restricted'
-
-
 function __get_scripts
   set -l cmdline (commandline -c)
   if set -q __fish_pnpm_cmdline; and test "$cmdline" = "$__fish_pnpm_cmdline"
