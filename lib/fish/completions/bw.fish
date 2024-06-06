@@ -441,9 +441,8 @@ function __fish_bw_using_command
     return 1
 end
 
-complete -c bw -n "not __fish_seen_subcommand_from $commands" \
-    -a "$commands"
-
+# complete -c bw -n "not __fish_seen_subcommand_from $commands" \
+#     -a "$commands"
 
 ### arguments
 complete -x -c bw -n __fish_bw_no_command -l cleanexit -d 'Exit with a success exit code (0) unless an error is thrown'
@@ -492,7 +491,6 @@ complete -x -c bw -n '__fish_bw_using_command sync' -s f -l force -d 'Force a fu
 complete -x -c bw -n '__fish_bw_using_command sync' -s h -l help -d 'output usage information'
 complete -x -c bw -n '__fish_bw_using_command sync' -l last -d 'Get the last sync date'
 
-
 ### generate
 complete -c bw -f -n __fish_bw_no_command -a generate -d 'Generate a password/passphrase'
 complete -c bw -f -n '__fish_bw_using_command generate'
@@ -512,43 +510,98 @@ complete -x -c bw -n '__fish_bw_using_command generate' -l uppercase -s u -d 'In
 complete -x -c bw -n '__fish_bw_using_command generate' -l words -d 'Number of words'
 
 ### encode
-#
+complete -c bw -f -n __fish_bw_no_command -a encode -d 'Base 64 encode stdin'
+
 ### config
-#
+complete -c bw -f -n __fish_bw_no_command -a config -d 'Configure CLI settings'
+complete -c bw -f -n '__fish_bw_using_command config'
+complete -x -c bw -n '__fish_bw_using_command config' -l web-vault -d 'Provides a custom web vault URL that differs from the base URL'
+complete -x -c bw -n '__fish_bw_using_command config' -l api -d 'Provides a custom API URL that differs from the base URL'
+complete -x -c bw -n '__fish_bw_using_command config' -l identity -d 'Provides a custom identity URL that differs from the base URL'
+complete -x -c bw -n '__fish_bw_using_command config' -l icons -d 'Provides a custom icons service URL that differs from the base URL'
+complete -x -c bw -n '__fish_bw_using_command config' -l notifications -d 'Provides a custom notifications URL that differs from the base URL'
+complete -x -c bw -n '__fish_bw_using_command config' -l events -d 'Provides a custom events URL that differs from the base URL'
+complete -x -c bw -n '__fish_bw_using_command config' -l key-connector -d 'Provides the URL for your Key Connector server'
+complete -x -c bw -n '__fish_bw_using_command config' -s h -l help -d 'display help for command'
+
 ### update
-#
+complete -c bw -f -n __fish_bw_no_command -a update -d 'Check for updates'
+complete -c bw -f -n '__fish_bw_using_command update'
+complete -x -c bw -n '__fish_bw_using_command update' -l raw -d 'Return only the download URL for the update'
+
 ### completion
-#
+complete -c bw -f -n __fish_bw_no_command -a completion -d 'Generate shell completions'
+complete -c bw -f -n '__fish_bw_using_command completion'
+complete -x -c bw -n '__fish_bw_using_command completion' -s h -l help -d 'display help for command'
+complete -x -c bw -n '__fish_bw_using_command completion' -l shell -d 'Shell to generate completions for'
+
 ### status
-#
+complete -c bw -f -n __fish_bw_no_command -a status -d 'Show server, last sync, user information, and vault status'
+complete -c bw -f -n '__fish_seen_subcommand_from status'
+
 ### serve
-#
+complete -c bw -f -n __fish_bw_no_command -a serve -d 'Start a RESTful API webserver'
+complete -c bw -f -n '__fish_seen_subcommand_from serve'
+complete -x -c bw -n '__fish_bw_using_command serve' -l hostname -d 'The hostname to bind your API webserver to'
+complete -x -c bw -n '__fish_bw_using_command serve' -l port -d 'The port to run your API webserver on'
+complete -x -c bw -n '__fish_bw_using_command serve' -l disable-origin-protection -d 'If set, allows requests with origin header. Warning, this option exists for backwards compatibility reasons and exposes your environment to known CSRF attacks'
+complete -x -c bw -n '__fish_bw_using_command serve' -s h -l help -d 'display help for command'
+
 ### list
-#
+set -l list_objects items collections folders organizations org-collections org-members organizations
+complete -c bw -f -n __fish_bw_no_command -a list -d 'List an array of objects from the vault'
+complete -c bw -f -n '__fish_seen_subcommand_from list' -a "$list_objects"
+complete -x -c bw -n '__fish_bw_using_command list' -l search -d 'Perform a search on the listed objects'
+complete -x -c bw -n '__fish_bw_using_command list' -l url -d 'Filter items of type login with a url-match search'
+complete -x -c bw -n '__fish_bw_using_command list' -l folderid -d 'Filter items by folder id'
+complete -x -c bw -n '__fish_bw_using_command list' -l collectionid -d 'Filter items by collection id'
+complete -x -c bw -n '__fish_bw_using_command list' -l organizationid -d 'Filter items or collections by organization id'
+complete -x -c bw -n '__fish_bw_using_command list' -l trash -d 'Filter items that are deleted and in the trash'
+complete -x -c bw -n '__fish_bw_using_command list' -s h -l help -d 'display help for command'
+
 ### get
-#
+set -l get_objects item username password uri totp notes exposed attachment folder collection org-collection organization template fingerprint send
+complete -c bw -f -n __fish_bw_no_command -a get -d 'Get an object from the vault'
+complete -c bw -f -n '__fish_seen_subcommand_from get' -a "$get_objects"
+complete -x -c bw -n '__fish_bw_using_command get' -l itemid -d 'Attachment\'s item id'
+complete -x -c bw -n '__fish_bw_using_command get' -l output -d 'Output directory or filename for attachment'
+complete -x -c bw -n '__fish_bw_using_command get' -l organizationid -d 'Organization id for an organization object'
+complete -x -c bw -n '__fish_bw_using_command get' -s h -l help -d 'display help for command'
+
 ### create
+complete -c bw -f -n __fish_bw_no_command -a create -d 'Create an object in the vault'
 #
 ### edit
+complete -c bw -f -n __fish_bw_no_command -a edit -d 'Edit an object from the vault'
 #
 ### delete
+complete -c bw -f -n __fish_bw_no_command -a delete -d 'Delete an object from the vault'
 #
 ### restore
+complete -c bw -f -n __fish_bw_no_command -a restore -d 'Restores an object from the trash'
 #
 ### move
+complete -c bw -f -n __fish_bw_no_command -a move -d 'Move an item to an organization'
 #
 ### confirm
+complete -c bw -f -n __fish_bw_no_command -a confirm -d 'Confirm an object to the organization'
 #
 ### import
+complete -c bw -f -n __fish_bw_no_command -a import -d 'Import vault data from a file'
 #
 ### export
+complete -c bw -f -n __fish_bw_no_command -a export -d 'Export vault data to a CSV or JSON file'
 #
 ### share
+complete -c bw -f -n __fish_bw_no_command -a share -d '--DEPRECATED-- Move an item to an organization'
 #
 ### send
+complete -c bw -f -n __fish_bw_no_command -a send -d 'Work with Bitwarden sends. A Send can be quickly created using this command or subcommands can be used to fine-tune the Send'
 #
 ### receive
+complete -c bw -f -n __fish_bw_no_command -a receive -d 'Access a Bitwarden Send from a url'
 #
+
 
 
 # set -l commands login logout lock unlock sync generate encode config update 
