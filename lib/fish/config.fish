@@ -212,3 +212,5 @@ nvm use node &>/dev/null
 
 # unset the globally inherited EDITOR
 set -eg EDITOR
+
+zoxide init fish --cmd cd | source
