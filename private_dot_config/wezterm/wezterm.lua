@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font_with_fallback({ "JetBrains Mono NL NF", "Fira Code" })
 
-config.color_scheme = "Ayu Mirage"
+config.color_scheme = "Ayu Dark (Gogh)"
 -- config.color_scheme = "Afterglow"
 
 config.keys = {
@@ -42,11 +42,6 @@ config.keys = {
 		key = "DownArrow",
 		mods = "ALT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
-	},
-	{
-		key = "w",
-		mods = "CTRL",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 }
 
