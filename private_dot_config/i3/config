@@ -3,13 +3,14 @@ set $super Mod4
 set $alt Mod1
 
 # set font
-font pango: Noto Sans 12
+font pango: Noto Sans 14
 
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
 
 #autostart
-#exec --no-startup-id hsetroot -full /usr/share/backgrounds/custom/code-weird.png
+exec --no-startup-id setxkbmap -layout "gb,de" -option "grp:alt_shift_toggle"
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nitrogen --restore # restore wallpaper
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
@@ -18,7 +19,7 @@ exec --no-startup-id compton -b
 bindsym $super+Return exec wezterm
 
 # start dmenu (a program launcher)
-bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=12'"
+bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=14'"
 bindsym $super+d exec rofi -show drun -sidebar-mode 
 # common apps keybinds
 bindsym Print exec scrot 'Screenshot_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
@@ -26,6 +27,15 @@ bindsym $super+l exec ~/.config/scripts/lock
 
 bindsym $super+Shift+w exec firefox
 bindsym $super+e exec thunar
+
+# clipboard manager
+bindsym $super+v exec /usr/bin/parcellite
+
+# color picker
+bindsym --release $super+Shift+c exec xcolor | xclip -selection clipboard
+
+# screenshot
+bindsym $super+Shift+s exec flameshot gui
 
 #change volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
@@ -55,10 +65,10 @@ bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $super+h split h
+# bindsym $super+h split h
 
 # split in vertical orientation
-bindsym $super+v split v
+# bindsym $super+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $super+f fullscreen toggle
@@ -107,20 +117,20 @@ mode "resize" {
 #bindsym $super+r mode "resize"
 
 # panel
-bar {
-        status_command i3status
-        colors {
-                background #2f343f
-                statusline #2f343f
-                separator #4b5262
-
-                # colour of border, background, and text
-                focused_workspace       #2f343f #bf616a #d8dee8
-                active_workspace        #2f343f #2f343f #d8dee8
-                inactive_workspace      #2f343f #2f343f #d8dee8
-                urgent_workspace        #2f343f #ebcb8b #2f343f
-        }
-}
+# bar {
+#         status_command i3status
+#         colors {
+#                 background #2f343f
+#                 statusline #2f343f
+#                 separator #4b5262
+#
+#                 # colour of border, background, and text
+#                 focused_workspace       #2f343f #bf616a #d8dee8
+#                 active_workspace        #2f343f #2f343f #d8dee8
+#                 inactive_workspace      #2f343f #2f343f #d8dee8
+#                 urgent_workspace        #2f343f #ebcb8b #2f343f
+#         }
+# }
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2 
