@@ -16,7 +16,7 @@ configuration {
       sorting-method: "name";
   }
 }
-@theme "ayu-mirage"
+@theme "ayu-dark"
 listview {
   lines: 6;
 }
