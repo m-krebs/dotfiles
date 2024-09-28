@@ -9,7 +9,6 @@ font pango: Noto Sans 14
 floating_modifier $super
 
 #autostart
-exec --no-startup-id setxkbmap -layout "gb,de" -option "grp:alt_shift_toggle"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nitrogen --restore # restore wallpaper
 exec --no-startup-id xsettingsd &
@@ -36,6 +35,10 @@ bindsym --release $super+Shift+c exec xcolor | xclip -selection clipboard
 
 # screenshot
 bindsym $super+Shift+s exec flameshot gui
+
+# keyboard layout toggle
+# bindsym $super+space exec fish -c toggle_keylang
+bindsym $super+space exec --no-startup-id $HOME/.config/i3/keyboard_toggle.sh
 
 #change volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
@@ -77,10 +80,10 @@ bindsym $super+f fullscreen toggle
 bindsym $super+s layout toggle split
 
 # toggle tiling / floating
-bindsym $super+space floating toggle
+# bindsym $super+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $super+Shift+space focus mode_toggle
+# bindsym $super+Shift+space focus mode_toggle
 
 # switch to workspace
 bindsym $alt+Control+Right workspace next
