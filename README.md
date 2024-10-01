@@ -1,10 +1,22 @@
-# dotfiles managed with [@chezmoi](https://github.com/twpayne/chezmoi)
+<h1 align="center">
+    ~/.&nbsp;📂
+    <br>
+    <sup><sub>powered by  <a href="https://www.chezmoi.io/">chezmoi</a></sub></sup>
+</h1>
 
 ## :book:&nbsp; Overview
 
-This repo contains all my dotfiles managed by [chezmoi](https://github.com/twpayne/chezmoi).
-They can change over time without further notice.
+## Gettings started
+
+```bash
+chezmoi init --apply m-krebs
+```
 
 ## :file_folder:&nbsp; Included configurations
 
 ### :fish:&nbsp; Fish
+
+### :spiral_notepad:&nbsp; NeoVim
+
+### :window:&nbsp; i3
+
