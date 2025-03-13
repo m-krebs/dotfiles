@@ -13,6 +13,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nitrogen --restore # restore wallpaper
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
+exec --no-startup-id dunst
 
 # start a terminal
 bindsym $super+Return exec wezterm
@@ -22,10 +23,11 @@ bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:si
 bindsym $super+d exec rofi -show drun -sidebar-mode 
 # common apps keybinds
 bindsym Print exec scrot 'Screenshot_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
+# bindsym $super+l exec ~/.config/scripts/lock
 bindsym $super+l exec ~/.config/scripts/lock
 
 bindsym $super+Shift+w exec firefox
-bindsym $super+e exec thunar
+bindsym $super+e exec xdg-open ~
 
 # clipboard manager
 bindsym $super+v exec /usr/bin/parcellite

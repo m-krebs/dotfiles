@@ -8,8 +8,8 @@ polybar-msg cmd quit
 
 if type "xrandr"; then
 	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-		MONITOR=$m polybar -c ~/.config/polybar/config.ini --reload default &
+		MONITOR=$m polybar --reload default &
 	done
 else
-	polybar -c ~/.config/polybar/config.ini --reload default &
+	polybar --reload toph &
 fi

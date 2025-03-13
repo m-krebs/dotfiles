@@ -6,6 +6,10 @@ config.font = wezterm.font_with_fallback({ "JetBrains Mono NL NF", "Fira Code" }
 config.color_scheme = "Ayu Dark (Gogh)"
 -- config.color_scheme = "Afterglow"
 
+config.tab_bar_at_bottom = true
+config.show_tab_index_in_tab_bar = false
+config.use_fancy_tab_bar = false
+
 config.keys = {
 	{
 		key = "+",
