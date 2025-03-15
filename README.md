@@ -20,3 +20,10 @@ chezmoi init --apply m-krebs
 
 ### :window:&nbsp; i3
 
+### [rofi](https://davatorium.github.io/rofi)
+
+### [polybar](https://polybar.github.io/)
+
+### [zellij](https://zellij.dev)
+
+### [wezterm](https://wezterm.org)
