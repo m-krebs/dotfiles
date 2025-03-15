@@ -16,7 +16,7 @@ chezmoi init --apply m-krebs
 
 ### :fish:&nbsp; Fish
 
-### :spiral_notepad:&nbsp; NeoVim
+### :spiral_notepad:&nbsp; [NeoVim](https://m-krebs.dev/nvim)
 
 ### :window:&nbsp; i3
 
