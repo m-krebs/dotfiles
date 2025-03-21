@@ -36,13 +36,6 @@ function sdk -d "Manage SDKs"
             echo "Please open a new terminal/shell to load SDKMAN!"
         end
     else
-        if test -n "$argv"
-            if test $argv[1] = installed
-                # Declare the _actual_ sdk command for fish
-                __fish_sdkman_run_in_bash "source \"$__fish_sdkman_noexport_init\" && sdk list $argv[2] | grep installed"
-                return 0
-            end
-        end
         # Declare the _actual_ sdk command for fish
         __fish_sdkman_run_in_bash "source \"$__fish_sdkman_noexport_init\" && sdk $argv"
     end
