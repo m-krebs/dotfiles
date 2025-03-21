@@ -56,5 +56,5 @@ end
 # init zoxide (better cd navigation)
 zoxide init fish --cmd cd | source
 
-# init nvm (too slow)
-# nvm use --no-use
+# init nvm
+nvm use lts > /dev/null
