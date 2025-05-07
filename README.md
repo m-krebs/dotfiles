@@ -34,3 +34,8 @@ chezmoi init --apply m-krebs
 - [i3](https://i3wm.org/)
 - [ly-dm](https://archlinux.org/packages/extra/x86_64/ly/) (login)
 - [xsecurelock](https://github.com/google/xsecurelock)
+
+## new setup (todo change)
+- [hyprland]
+- [waybar]
+- 

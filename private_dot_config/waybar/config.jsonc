@@ -19,15 +19,16 @@
 	"modules-right": [
 		"group/system-levels",
 		"custom/l_end","idle_inhibitor","clock","custom/r_end",
-        "custom/l_end","hyprland/language","custom/r_end",
-		"group/control-panel", "custom/padd"
+		"custom/l_end","hyprland/language","custom/r_end",
+		"custom/l_end","group/control-panel","custom/r_end","custom/padd"
 	],
     "group/system-info": {
 		"orientation": "horizontal",
 		"modules": [
 			"custom/cpu",
 			"custom/ram",
-			"custom/gpu"
+			"custom/gpu",
+			"custom/storage"
 		]
 	},
 	"group/system-levels": {
@@ -112,7 +113,15 @@
 		"interval": 2,
 		"tooltip": true
 	},
-
+	"custom/storage": {
+		"exec": "python ~/bin/system-info.py --storage --normal-color \"#f5e0dc\" --critical-color \"#f38ba8\" | cat",
+		"on-click": "python ~/bin/system-info.py --gpu --click",
+		"return-type": "json",
+		"format": "{}",
+		"rotate": 0,
+		"interval": 2,
+		"tooltip": true
+	},
     //==> Right Modules
     ///////////////////////////////////////////////////////////////
     "clock": {
@@ -195,6 +204,7 @@
 	"hyprland/language": {
         "format": "{short} {variant}",
         "rotate": 0,
+	"on-click": "hyprctl switchxkblayout all next",
         "min-length": 2,
         "tooltip": false
     },
@@ -229,7 +239,7 @@
         "format": "<span color=\"#89b4fa\">󰂯  </span>",
         "interval": 3,
         "rotate": 0,
-        "on-click": "blueman-manager",
+        "on-click": "overskride",
         "tooltip": false
     },
     "custom/networkmanager": {

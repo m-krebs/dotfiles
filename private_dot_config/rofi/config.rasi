@@ -1,7 +1,7 @@
 configuration {
   show-icons: true;
   drun-icon-theme: "Papirus-Dark";
-  terminal: "wezterm";
+  terminal: "kitty";
   display-window: "Windows";
   display-run: "Commands";
   display-ssh: "SSH";
