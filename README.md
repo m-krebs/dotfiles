@@ -11,33 +11,41 @@
 ```bash
 chezmoi init --apply m-krebs
 ```
-
 ## :file_folder:&nbsp; Included configurations
 
 ### :fish:&nbsp; Fish
+#### dependencies:
+- [omf](https://github.com/oh-my-fish/oh-my-fish)
+- [fisher](https://github.com/jorgebucaran/fisher)
 
 ### :spiral_notepad:&nbsp; [NeoVim](https://m-krebs.dev/nvim)
+#### dependencies:
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [fd](https://github.com/sharkdp/fd)
+- [fzf](https://github.com/junegunn/fzf)
 
-### :window:&nbsp; i3
+### [i3](https://i3wm.org/)
 
 ### [rofi](https://davatorium.github.io/rofi)
 
-### [polybar](https://polybar.github.io/)
-
 ### [zellij](https://zellij.dev)
-
-### [wezterm](https://wezterm.org)
 
 ## OS Configuration
 
-### Window Manager
-- [i3](https://i3wm.org/)
+### Desktop Environment
 - [ly-dm](https://archlinux.org/packages/extra/x86_64/ly/) (login)
-- [xsecurelock](https://github.com/google/xsecurelock)
+- [kitty](https://github.com/kovidgoyal/kitty)
+  - emoji fonts (https://github.com/googlefonts/noto-emoji/)
+- [dunst](https://github.com/dunst-project/dunst)
 
-## new setup (todo change)
-- [hyprland]
-- [hyprpaper]
-- [waybar]
-- [kitty]
-    - emoji fonts (https://github.com/googlefonts/noto-emoji/)
+#### X11
+- [i3](https://i3wm.org/)
+- [xsecurelock](https://github.com/google/xsecurelock)
+- [wezterm](https://wezterm.org)
+- [polybar](https://polybar.github.io/)
+
+#### Wayland
+- [hyprland](https://wiki.hyprland.org)
+- [hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/)
+- [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
+- [waybar](https://github.com/Alexays/Waybar/)
