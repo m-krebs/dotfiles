@@ -37,5 +37,7 @@ chezmoi init --apply m-krebs
 
 ## new setup (todo change)
 - [hyprland]
+- [hyprpaper]
 - [waybar]
-- 
+- [kitty]
+    - emoji fonts (https://github.com/googlefonts/noto-emoji/)
