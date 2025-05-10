@@ -252,7 +252,7 @@
         "tooltip": false
     },
     "custom/power": {
-        "on-click": "sh ~/bin/rofi-menus/powermenu.sh",
+        "on-click": "sh ~/bin/rofi-menus/power.sh",
         "format": "<span color=\"#f38ba8\"> </span>",
         "rotate": 0,
         "tooltip": false
