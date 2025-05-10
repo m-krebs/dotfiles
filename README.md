@@ -49,3 +49,4 @@ chezmoi init --apply m-krebs
 - [hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/)
 - [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
 - [waybar](https://github.com/Alexays/Waybar/)
+- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
