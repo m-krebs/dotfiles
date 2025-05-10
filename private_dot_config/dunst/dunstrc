@@ -1,0 +1,46 @@
+[global]
+# Geometry
+width = 300
+
+# Font
+font = "sans-serif 12"
+
+# Colors
+background = "#282a36"
+foreground = "#f8f8f2"
+frame_color = "#6272a4"
+
+# Rounded Corners
+corner_radius = 10
+
+# Icon
+icon_position = left
+text_icon_padding = 10
+
+# Timeout
+sticky_history = true
+history_length = 20
+follow = mouse
+
+# Frame settings - moved gap_size back here
+gap_size = 3
+
+[format]
+# Formatting
+markup = full
+
+[urgency_low]
+background = background
+foreground = foreground
+timeout = 5
+
+[urgency_normal]
+background = background
+foreground = foreground
+timeout = 10
+
+[urgency_critical]
+background = background
+foreground = foreground
+timeout = 0
+
