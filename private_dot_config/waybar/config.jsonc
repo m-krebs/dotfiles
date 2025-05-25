@@ -36,6 +36,7 @@
 		"modules": [
 			"custom/brightness",
 			"custom/battery",
+			"custom/caps",
 			"custom/volume",
 			"custom/microphone"
 		]
@@ -257,7 +258,12 @@
         "rotate": 0,
         "tooltip": false
     },
-
+    "custom/caps": {
+	"exec": "sh ~/bin/detect-caps.sh",
+	"format": "  ",
+	"rotate": 0,
+	"tooltip": false
+    },
 	
     //==> Other Modules
     ///////////////////////////////////////////////////////////////

@@ -1,3 +1,6 @@
 [user]
   email = {{ .git.email | quote }}
   name = {{ .git.name | quote }}
+
+[push]
+  autoSetupRemote = true
