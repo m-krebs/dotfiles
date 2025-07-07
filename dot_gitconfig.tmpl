@@ -1,6 +1,13 @@
 [user]
   email = {{ .git.email | quote }}
   name = {{ .git.name | quote }}
+  signingkey = {{ .git.signingkey | quote }}
 
 [push]
   autoSetupRemote = true
+
+[init]
+  defaultBranch = main
+
+[commit]
+  gpgsign = true
