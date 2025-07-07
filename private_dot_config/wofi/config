@@ -34,6 +34,7 @@ no_actions=true
 sort_order=default
 gtk_dark=true
 filter_rate=100
+single_click=true
 
 ## Keys
 # key_expand=Tab
