@@ -11,6 +11,7 @@
     "group/control",
     "clock",
     "custom/notification",
+    "hyprland/language",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -98,6 +99,7 @@
   "hyprland/language": {
     "format": "<span color='#c792ea'></span> {shortDescription} ",
     "keyboard-name": "at-translated-set-2-keyboard",
+    "on-click": "hyprctl switchxkblayout all next",
     "min-length": 5,
   },
   "clock": {
