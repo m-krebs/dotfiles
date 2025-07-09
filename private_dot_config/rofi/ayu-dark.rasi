@@ -12,7 +12,7 @@
 * {
   accentcolor: #ffcc66;
   backgroundcolor: #10141c;
-  separatorcolor: transparent;
+
   foregroundcolor: #bfbab0;
   selectioncolor: #fafafa;
   
@@ -26,7 +26,7 @@ window {
   background-color: @backgroundcolor;
   border-color: @accentcolor;
   border: 2;
-  border-radius: 0; 
+  border-radius: 24px;
   padding: 18 14;
   width: 640;
 }
@@ -45,12 +45,15 @@ prompt {
 }
 
 element {
-  spacing: 2;
+  spacing: 4;
+  margin: 2;
   padding: 8;
+  border-radius: 12px;
 }
 
 element selected normal {
   text-color: @selectioncolor;
+  background-color: #47526633;
 }
 
 element selected active {
