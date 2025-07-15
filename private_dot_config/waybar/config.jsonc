@@ -10,8 +10,8 @@
     "group/hw",
     "group/control",
     "clock",
-    "custom/notification",
     "hyprland/language",
+    "custom/notification",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
