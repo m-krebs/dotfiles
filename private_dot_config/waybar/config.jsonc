@@ -103,7 +103,7 @@
     "min-length": 5,
   },
   "clock": {
-    "timezone": "Asia/Kolkata",
+    "timezone": "Europe/Berlin",
     "format": "<span color='#ffcb6b'>󰥔</span> {:%a %b %d %R %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
