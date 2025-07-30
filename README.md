@@ -50,3 +50,4 @@ chezmoi init --apply m-krebs
 - [hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
 - [waybar](https://github.com/Alexays/Waybar/)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
+- [swaync](https://github.com/ErikReider/SwayNotificationCenter)
