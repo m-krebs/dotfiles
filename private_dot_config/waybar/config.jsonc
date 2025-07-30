@@ -97,8 +97,7 @@
     "tooltip": false,
   },
   "hyprland/language": {
-    "format": "<span color='#c792ea'></span> {shortDescription} ",
-    "keyboard-name": "at-translated-set-2-keyboard",
+    "format": "<span color='#c792ea'></span> {short} ",
     "on-click": "hyprctl switchxkblayout all next",
     "min-length": 5,
   },
