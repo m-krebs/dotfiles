@@ -1,0 +1,18 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Install dependencies
+      community.general.pacman:
+        name:
+          - hyprland
+          - hyprlock
+          - hyprpaper
+          - pipewire
+          - wireplumber
+          - rofi
+          - neovim
+          - fzf
+          - ripgrep
+          - waybar
+
+        state: present
