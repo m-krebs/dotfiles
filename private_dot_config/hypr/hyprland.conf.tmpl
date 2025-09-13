@@ -11,8 +11,12 @@
 ################
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor= HDMI-A-1, 2560x1440@144, 1920x0, 1 
-monitor= HDMI-A-2, 1920x1080, 0x0, 1
+{{ if ne .chezmoi.hostname "m-fw" }}
+monitor = HDMI-A-1, 2560x1440@144, 1920x0, 1 
+monitor = HDMI-A-2, 1920x1080, 0x0, 1
+{{ else }}
+monitor = eDP-1, 2880x1920@120, 0x0, 1.5
+{{ end }}
 
 ###################
 ### MY PROGRAMS ###
@@ -187,13 +191,14 @@ input {
 
     touchpad {
         natural_scroll = true
-        drag_3fg = 1
     }
 }
 
 # https://wiki.hyprland.org/Configuring/Variables/#gestures
 gestures {
-    workspace_swipe = false
+    gesture = 3, horizontal, workspace
+    gesture = 3, up, mod: SUPER, fullscreen
+    gesture = 3, down, mod: SUPER, fullscreen
 }
 
 # Example per-device config
