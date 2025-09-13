@@ -2,6 +2,8 @@
   connection: local
   tasks:
     - name: Install dependencies
+      become: true
+      become_user: root
       community.general.pacman:
         name:
           - hyprland
@@ -14,5 +16,9 @@
           - fzf
           - ripgrep
           - waybar
+          - swaync
+          # screenshots
+          - grim
+          - slurp
 
         state: present
