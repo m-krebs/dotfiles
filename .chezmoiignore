@@ -2,6 +2,7 @@ lib/
 README.md
 LICENSE
 install.sh
+setup.yml
 
 **/.git
 **/.gitmodules
