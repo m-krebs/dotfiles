@@ -5,7 +5,7 @@
 
 OPTIONS="󰌾  lock\n󰒲  suspend\n󰍃  logout\n󰑙  reboot\n⏻  shutdown"
 
-SELECTED=$(printf "$OPTIONS" | rofi -dmenu -p "Power Menu")
+SELECTED=$(printf "$OPTIONS" | rofi -dmenu -i -p "Power Menu")
 
 case $SELECTED in
 "󰌾  lock") sh $HOME/bin/screen-lock.sh ;;
