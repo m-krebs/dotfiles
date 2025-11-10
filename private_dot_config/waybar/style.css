@@ -120,3 +120,14 @@ window#waybar.empty #window {
 	padding: 0px 16px;
 	margin: 8px 8px 0px 4px;
 }
+
+#keyboard-state {
+}
+
+#keyboard-state label.locked {
+	background-color: @bg1;
+	border-radius: 18px;
+	padding: 0px 16px;
+	margin: 8px 8px 0px 4px;
+	font-weight: bold;
+}

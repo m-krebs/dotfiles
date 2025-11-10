@@ -2,15 +2,17 @@
 {
   //"layer": "top", // Waybar at top layer
   "position": "bottom",
+  // "output": ["DP-2", "HDMI-A-2"],
   "height": 40,
   "margin-bottom": 4,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window",],
   "modules-right": [
     "tray",
     "group/hw",
     "group/control",
     "clock",
     "hyprland/language",
+    "keyboard-state",
     "custom/notification",
   ],
   "hyprland/workspaces": {
@@ -114,6 +116,16 @@
       "<span color='#ffcb6b'></span>",
       "<span color='#ffcb6b'></span>",
     ],
+  },
+  "keyboard-state": {
+    "interval": 0.5,
+    "numlock": false,
+    "capslock": true,
+    "format": "{icon}",
+    "format-icons": {
+      "locked": "CAPSLOCK",
+      "unlocked": "",
+    },
   },
   "custom/notification": {
     "tooltip": false,
