@@ -1,8 +1,9 @@
 function nvim
-        while true
-                /usr/sbin/nvim $argv
-                if test $status -ne 1
-                        break
-                end
+    while true
+        set binary_path (type -P nvim)
+        eval $binary_path $argv
+        if test $status -ne 1
+            break
         end
+    end
 end
