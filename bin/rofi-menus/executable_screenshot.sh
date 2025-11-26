@@ -11,7 +11,7 @@ SELECTED=$(echo -e $OPTIONS | rofi -dmenu -p "Screenshot")
 
 # Generate filename with timestamp
 FILENAME="screenshot_$(date +%Y%m%d_%H%M%S).png"
-FILEPATH="$HOME/Pictures/Screenshots/$FILENAME"
+FILEPATH="$HOME/Pictures/screenshots/$FILENAME"
 
 case $SELECTED in
 "📱 Fullscreen")
