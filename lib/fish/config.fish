@@ -5,7 +5,7 @@ or exit
 # prmt > starship
 if type -q prmt
     function fish_prompt
-        prmt --code $status '{path:cyan} {git:purple} \n{ok:green}{fail:red} '
+        prmt --code $status '{path:cyan} {git:purple:s:on :} \n{ok:green:❯}{fail:red} '
     end
 else
     if type -q starship
@@ -45,10 +45,10 @@ end
 set -eg EDITOR # because nvim is superior
 
 # init pnpm
-set -gx PNPM_HOME "/home/mkrebs/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
-end
+# set -gx PNPM_HOME "/home/mkrebs/.local/share/pnpm"
+# if not string match -q -- $PNPM_HOME $PATH
+#     set -gx PATH "$PNPM_HOME" $PATH
+# end
 
 set -x THEFUCK_OVERRIDDEN_ALIASES git
 
