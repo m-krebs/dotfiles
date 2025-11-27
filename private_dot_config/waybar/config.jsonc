@@ -59,6 +59,7 @@
       "warning": 30,
       "critical": 15,
     },
+    "full-at": 99,
     "format": "<span color='#c3e88d'>{icon}</span> {capacity}%",
     "format-charging": "<span color='#c3e88d'>󱐋</span> {capacity}%",
     "format-plugged": "<span color='#c3e88d'></span> {capacity}%",

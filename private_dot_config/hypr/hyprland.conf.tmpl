@@ -27,7 +27,8 @@ monitor = eDP-1, 2880x1920@120, 0x0, 1.5
 # Set programs that you use
 $terminal = kitty
 $fileManager = nautilus
-$menu = rofi -show drun -sort
+$raycast = rofi -show drun -sort
+$menu = vicinae open
 $xkbLayoutSwitch = hyprctl switchxkblayout all next
 
 #################
@@ -224,6 +225,7 @@ bind = $mainMod, M, exit,
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, V, togglefloating,
 bind = ALT, Space, exec, $menu
+bind = $mainMod, D, exec, $raycast
 bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, J, togglesplit, # dwindle
 bind = $mainMod, Space, exec, $xkbLayoutSwitch
@@ -231,6 +233,7 @@ bind = $mainMod, L, exec, hyprlock
 bind = $mainMod SHIFT, N, exec, swaync-client -t -sw
 bind = $mainMod, W, exec, launch-webapp "https://web.whatsapp.com"
 bind = $mainMod SHIFT, M, exec, launch-webapp "https://mail.google.com"
+bind = $mainMod SHIFT, V, exec, vicinae deeplink vicinae://extensions/vicinae/clipboard/history
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
@@ -311,3 +314,6 @@ windowrule = suppressevent maximize, class:.*
 windowrule = prop nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
 windowrule = noinitialfocus, class:zoom, title:Zoom Workplace
 windowrule = noinitialfocus, class:zoom, title:menu window
+
+layerrule = blur,vicinae
+layerrule = ignorealpha 0, vicinae
