@@ -6,19 +6,47 @@
       become_user: root
       community.general.pacman:
         name:
+          - git
+          - which
+          - tar
+          - gcc
+          - rustup
+          - nvm
+          # Destop Environment
           - hyprland
           - hyprlock
           - hyprpaper
+          - waybar
+          - swaync
           - pipewire
           - wireplumber
           - rofi
+          # cli utils
           - neovim
+          - lazygit
+          - fish
+          - fd
           - fzf
+          - skim
           - ripgrep
-          - waybar
-          - swaync
+          - btop
           # screenshots
           - grim
           - slurp
-
         state: present
+    - name: Create ~/setup dir
+      ansible.builtin.file:
+        path: ~/setup
+        state: directory
+        mode: '0755'
+    - name: Install rust toolchain
+      ansible.builtin.shell:
+        cmd: "rustup install stable"
+    - name: Download oh-my-fish
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
+        dest: ~/setup/oh-my-fish.fish
+        mode: '0755'
+    - name: Install prmt with cargo
+      community.general.cargo:
+        name: prmt
