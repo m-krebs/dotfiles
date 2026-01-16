@@ -58,4 +58,6 @@ if type -q zoxide
 end
 
 # init nvm
-nvm use lts >/dev/null
+if type -q nvm
+    nvm use lts >/dev/null
+end

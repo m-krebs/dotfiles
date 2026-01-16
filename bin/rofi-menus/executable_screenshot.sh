@@ -7,7 +7,7 @@ mkdir -p "$HOME/Pictures/screenshots"
 
 OPTIONS="📱 Fullscreen\n🖱️ Selection\n🪟 Window\n📝 Fullscreen + Edit\n✏️ Selection + Edit\n🖼️ Window + Edit"
 
-SELECTED=$(echo -e $OPTIONS | rofi -dmenu -p "Screenshot")
+SELECTED=$(echo -e "$OPTIONS" | vicinae dmenu --placeholder "Screenshot")
 
 # Generate filename with timestamp
 FILENAME="screenshot_$(date +%Y%m%d_%H%M%S).png"
