@@ -11,11 +11,11 @@
 ################
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-{{ if ne .chezmoi.hostname "m-fw" }}
+{{ if eq .chezmoi.hostname "m-fw" }}
+monitor = eDP-1, 2880x1920@120, 0x0, 2
+{{ else }}
 monitor = HDMI-A-1, 2560x1440@144, 1920x0, 1 
 monitor = HDMI-A-2, 1920x1080, 0x0, 1
-{{ else }}
-monitor = eDP-1, 2880x1920@120, 0x0, 1.5
 {{ end }}
 
 ###################
@@ -28,7 +28,7 @@ monitor = eDP-1, 2880x1920@120, 0x0, 1.5
 $terminal = kitty
 $fileManager = nautilus
 $raycast = rofi -show drun -sort
-$menu = vicinae open
+$menu = vicinae toggle
 $xkbLayoutSwitch = hyprctl switchxkblayout all next
 
 #################
@@ -40,7 +40,11 @@ $xkbLayoutSwitch = hyprctl switchxkblayout all next
 
 # exec-once = $terminal
 # exec-once = nm-applet &
-exec-once = hyprpaper & sleep 1 && hyprpm reload & waybar
+# Started by systemd user service
+# exec-once = uwsm app -- hyprpaper
+exec-once = uwsm app -- waybar
+exec-once = uwsm app -- hyprpm reload
+exec-once = uwsm app -- vicinae server
 
 #############################
 ### ENVIRONMENT VARIABLES ###
@@ -171,6 +175,7 @@ master {
 misc {
     force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
     disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+    focus_on_activate = true
 }
 
 
@@ -308,12 +313,13 @@ bindl = , XF86AudioPrev, exec, playerctl previous
 # windowrule = float,class:^(kitty)$,title:^(kitty)$
 
 # Ignore maximize requests from apps. You'll probably like this.
-windowrule = suppressevent maximize, class:.*
+windowrule = suppress_event maximize, match:class = .*
 
 # Fix some dragging issues with XWayland
-windowrule = prop nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
-windowrule = noinitialfocus, class:zoom, title:Zoom Workplace
-windowrule = noinitialfocus, class:zoom, title:menu window
+# windowrule = no_focus on, match:class = ^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+# windowrule = no_initial_focus on, class:zoom, title:Zoom Workplace
+# windowrule = no_initial_focus on, class:zoom, title:menu window
 
-layerrule = blur,vicinae
-layerrule = ignorealpha 0, vicinae
+layerrule = blur on, match:namespace vicinae
+layerrule = ignore_alpha 0, match:namespace vicinae
+layerrule = no_anim on, match:namespace vicinae
