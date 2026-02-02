@@ -57,6 +57,8 @@ if type -q zoxide
     zoxide init fish --cmd cd | source
 end
 
+bind -M insert \e\[A '_fzf_search_history'
+
 # init nvm
 if type -q nvm
     nvm use lts >/dev/null
