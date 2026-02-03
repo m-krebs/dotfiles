@@ -42,6 +42,7 @@ $xkbLayoutSwitch = hyprctl switchxkblayout all next
 # exec-once = nm-applet &
 # Started by systemd user service
 # exec-once = uwsm app -- hyprpaper
+exec-once = hyprpm update
 exec-once = uwsm app -- waybar
 exec-once = uwsm app -- hyprpm reload
 exec-once = uwsm app -- vicinae server
@@ -155,10 +156,10 @@ animations {
 # windowrule = rounding 0, floating:0, onworkspace:w[tv1]
 # windowrule = bordersize 0, floating:0, onworkspace:f[1]
 # windowrule = rounding 0, floating:0, onworkspace:f[1]
-windowrulev2=move -1920 0,class:(flameshot),title:(flameshot)
-windowrulev2=pin,class:(flameshot),title:(flameshot)
-windowrulev2=fullscreenstate,class:(flameshot),title:(flameshot)
-windowrulev2=float,class:(flameshot),title:(flameshot)
+windowrule = move -1920 0, match:class flameshot, match:title flameshot
+windowrule = pin on, match:class flameshot, match:title flameshot
+windowrule = fullscreen_state 2 2, match:class flameshot, match:title flameshot
+windowrule = float on, match:class flameshot, match:title flameshot
 
 # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
 dwindle {
@@ -196,6 +197,7 @@ input {
     sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
 
     touchpad {
+        disable_while_typing = true
         natural_scroll = true
     }
 }
