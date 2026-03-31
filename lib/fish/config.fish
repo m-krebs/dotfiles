@@ -63,3 +63,7 @@ end
 if type -q nvm
     nvm use lts >/dev/null
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
