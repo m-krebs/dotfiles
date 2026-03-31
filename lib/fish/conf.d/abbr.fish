@@ -5,3 +5,5 @@ abbr -a --position anywhere --command git -- c commit
 abbr -a -- ulh 'pnpm dlx unlighthouse --output-path ~/unlighthouse --site'
 abbr -a --position anywhere -- nv nvim
 abbr -a -- zj 'zellij attach default'
+abbr -a --position anywhere --command git -- tags 'tag -l'
+abbr -a --position anywhere --command docker -- temp 'run --entrypoint sh --rm -it'
