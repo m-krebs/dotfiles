@@ -164,7 +164,7 @@ windowrule = float on, match:class flameshot, match:title flameshot
 
 # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
 dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+#    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = true # You probably want this
 }
 
@@ -237,7 +237,7 @@ bind = ALT, Space, exec, $menu
 bind = ALT SHIFT, Space, exec, vicinae toggle deeplink vicinae://launch/system/run
 bind = $mainMod, D, exec, $raycast
 bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, J, togglesplit, # dwindle
+# bind = $mainMod, J, hl
 bind = $mainMod, Space, exec, $xkbLayoutSwitch
 bind = $mainMod, L, exec, hyprlock
 bind = $mainMod SHIFT, N, exec, swaync-client -t -sw
